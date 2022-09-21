@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sed -e "1,12s/^/#/" $1 > Temp.txt
+mv Temp.txt $1
+

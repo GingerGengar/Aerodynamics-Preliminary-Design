@@ -1,0 +1,33 @@
+%Seperator
+%Seperator
+%Seperator
+%Seperator
+%Seperator
+\section{Initial Airfoil Selection}
+\begin{comment}
+\end{comment}
+Based on the design requirements, the aircraft needs to have a stall speed that is as low as possible, which drives our wing area to be large.
+However, due to the geometric requirements of the craft, there is a limit to how large our wing area can be.
+So, if we make sure our wing produces as much lift as possible, we can still have a reasonable wing area with a really low stall speed. 
+So, we must prioritize high-lift capable wings.
+Therefore, we should choose "fatter" airfoils over their "thinner" counterparts.
+%Seperator
+\\~\\Here is how we are going to choose our airfoils. 
+We are going to have a list of airfoils just by visual inspection of which ones look "fat" for the high maximum lift coefficient and gentle stall characteristics.
+Then, we are going to run \texttt{xflr} on it and do wind-tunnel testing to rule all the others out and choose the one that best suits our needs.
+The selected airfoils are:
+%Seperator
+\\~\\\begin{tabular}{|m{\ltabsize}|m{\tabsize}|m{\tabsize}|m{\tabsize}|m{\tabsize}|}
+\hline 
+Airfoil Name  & Max Thickness & Max Thick Loc & Max Camber & Max Camber Loc \\ \hline
+Eppler 420      & 14.3 & 22.8 & 10.6 & 40.5 \\ \hline
+Eppler E423     & 12.5 & 23.7 &  9.5 & 41.4 \\ \hline
+S1223           & 12.1 & 19.8 &  8.1 & 49.0 \\ \hline
+S1223 RTL       & 13.5 & 19.9 &  8.3 & 55.2 \\ \hline
+Chuch Hollinger CH 10-48-13 & 12.8 & 30.6 & 10.2 & 49.3 \\ \hline
+Curtiss CR-1    & 12.2 & 24.0 &  4.7 & 42.0 \\ \hline
+Drela DAE11     & 12.8 & 32.8 &  6.6 & 44.4 \\ \hline
+Drela DAE21     & 11.8 & 32.0 &  6.6 & 43.7 \\ \hline
+Drela DAE31     & 11.1 & 29.3 &  6.7 & 47.0 \\ \hline
+Lissaman 7769   & 11.0 & 30.0 &  4.4 & 30.0 \\ \hline
+\end{tabular}

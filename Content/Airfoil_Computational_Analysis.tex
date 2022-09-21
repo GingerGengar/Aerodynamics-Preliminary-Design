@@ -1,0 +1,69 @@
+%Seperator
+%Seperator
+%Seperator
+%Seperator
+%Seperator
+\section{Airfoil Computational Analysis}
+\begin{comment}
+\end{comment}
+$$R = \frac{\rho U L}{\mu}$$
+Taking density of air to be $\rho=1.225\,kgm^{-3}$, dynamic viscosity $\mu=1.81\times10^{-5}\,kgm^{-1}s^{-1}$. 
+Our stall speed was prescribed by the requirements to be around $V_{stall} = 4.572\,ms^{-1}$. 
+Our chord length is predicted to be around $0.12\,m$ at the smallest part of the wing so to be safe, let us try to simulate for chord length of around $0.05\,m$. The \texttt{Python} script below is used to compute the Reynold's number,
+%$$R = (rho*U*L)/mu$$
+\lstinputlisting[language=Python]{Programming/R_Num.py}
+$$$$
+The results of running the algorithm for the stall speed and minimum chord length gives the lower bound Reynold's number that the \texttt{xflr} simulations ought to be run at,
+\begin{lstlisting}
+>>> R_Num(4.572, 0.05)
+15471.546961325967
+\end{lstlisting}
+$$$$
+Running the algorithm for the same stall speed but at the predicted maximum chord length of around $0.4\,m$ gives us the upper bound Reynold's number that the \texttt{xflr} simulations should be run at,
+\begin{lstlisting}
+>>> R_Num(4.572, 0.4)
+123772.37569060773
+\end{lstlisting}
+$$$$
+For extra insurance, let us run our \texttt{xflr} analysis on the range of .
+\begin{equation}10000 \leq R_{e} \leq 150000 \label{Re req}\end{equation}
+
+
+%Seperator
+%Seperator
+%Seperator
+%Seperator
+%Seperator
+\section{Algorithm Development}
+\begin{comment}
+\end{comment}
+
+%Seperator
+%Seperator
+%Seperator
+%Seperator
+\subsection{Theoretical Algorithmic Flow}
+\begin{comment}
+\end{comment}
+\begin{enumerate}
+\item Given an airfoil, we are going to run for a series of Reynold's number ranges prescribed based on equation $\ref{Re req}$. 
+\item For each of those Reynold's number, we are going to run simulations for a range of angles of attack. The range of the angles of attack is going to be high enough such that we can figure out the stall angle of attack and the corresponding maximum lift coefficient.
+\item Now each airfoil for differing Reynold's number is going to have different stall angles and different corresponding maximum lift coefficient. Stall is a separation effect and it is a very bad regime to fly in. Therefore, we want to choose flight regimes without stall. This is just the limit of the airfoil.
+\item This means that for a given airfoil, amongst all the different maximum lift coefficient due to Reynod's number variation, we will choose the minimum $c_{L,max}$.
+\item We will also compute the average maximum lift coefficients for a given airfoil amongst its differing Reynold's number ranges justto compare that the minimum $c_{L,max}$ is not due to results that have failed to converge.
+\end{enumerate}
+
+%Seperator
+%Seperator
+%Seperator
+%Seperator
+\subsection{Programming Implementation}
+\begin{comment}
+\end{comment}
+
+
+
+
+
+
+

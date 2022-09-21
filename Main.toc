@@ -1,0 +1,13 @@
+\contentsline {section}{\numberline {0.1}Rationale}{2}{section.0.1}%
+\contentsline {section}{\numberline {0.2}General Airfoil Comparisons}{2}{section.0.2}%
+\contentsline {subsection}{\numberline {0.2.1}"Fat" Airfoils}{2}{subsection.0.2.1}%
+\contentsline {subsubsection}{Advantages}{2}{section*.2}%
+\contentsline {subsubsection}{Disadvantages}{2}{section*.3}%
+\contentsline {subsection}{\numberline {0.2.2}"Thin" Airfoils}{2}{subsection.0.2.2}%
+\contentsline {subsubsection}{Advantages}{2}{section*.4}%
+\contentsline {subsubsection}{Disadvantages}{2}{section*.5}%
+\contentsline {section}{\numberline {0.3}Initial Airfoil Selection}{2}{section.0.3}%
+\contentsline {section}{\numberline {0.4}Airfoil Computational Analysis}{3}{section.0.4}%
+\contentsline {section}{\numberline {0.5}Algorithm Development}{4}{section.0.5}%
+\contentsline {section}{\numberline {0.6}Airfoil Experimental Analysis}{4}{section.0.6}%
+\contentsline {section}{\numberline {0.7}Wing Design}{4}{section.0.7}%

@@ -1,0 +1,43 @@
+#!/bin/bash
+
+#Arg1: Airfoil Data File
+#Arg2: Reynold's Number
+#Arg3: First AOA
+#Arg4: Last AOA
+#Arg5: Increment of AOA's
+
+#Disable Plot Pop-ups
+echo -e "plop\nG, F\n"
+
+#To load the airfoil data we can use the following command
+echo "load $1.dat"
+
+#Enter operation mode
+echo "oper"
+
+#Change Iteration Solvers
+echo "ITER 1000"
+
+#Set the Reynold's Number
+echo "Visc $2"
+
+#Set the Mach Number
+echo "Mach 0"
+
+#Set the type of simulation we seek
+echo "Type 1"
+
+#Save the polars
+echo -e "Pacc\n\n"
+
+#Run the angles of attack 
+echo "aseq $3 $4 $5"
+
+#Save the polars to a file
+echo -e "PWRT\n$1_Output_RE_$2.tex "
+
+#Exit to the main menu
+echo -e "\n"
+
+#Quit Xfoil
+echo "Quit"

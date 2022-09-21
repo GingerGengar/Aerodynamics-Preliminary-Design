@@ -1,0 +1,36 @@
+#!/bin/bash
+
+#Arg1: Airfoil Data Name
+#Arg2: Initial Reynold's Number
+#Arg3: Final Reynold's Number
+#Arg4: Increment of Reynold's Number
+
+#Name of the output File
+Output_File=$1_Multi_Re.tex
+
+#Angle of Attack Variables
+AOA_Init=0
+AOA_Final=50
+AOA_Inc=0.1
+
+#Print the Name of the Airfoil
+echo "# Airfoil Name: "$1 > $Output_File
+
+#Print the Data Header of the airfoil Re, Max_CL, stall reached or not
+echo "# |Reynold's Number | Maximum Lift Coeff | Stall Reached? (y=1,n=0)|" >> $Output_File
+
+#Iterate Over Each Reynold's Number
+for ((Re = $2; Re <= $3; Re=Re+$4)) ;do
+    #Name of XFoil Output File
+    XFoil_Output_File=$1_Output_RE_$Re.tex
+    #Generate the Input script for the Reynold's number and AOA and dat file
+    ./Gen_Input_File $1 $Re $AOA_Init $AOA_Final $AOA_Inc > Temp_Inst.txt
+    #Run XFoil with the generated Input script
+    xfoil < Temp_Inst.txt
+    #Comment Out the resulting data produced by XFoil so Python can read
+    ./Comment_Out $XFoil_Output_File
+    #Write Reynold's Number to Output File
+    echo -n $Re" " >> $Output_File
+    #Write max cl and stall status to Output File
+    ./Read_Polar.py $XFoil_Output_File >> $Output_File
+done
