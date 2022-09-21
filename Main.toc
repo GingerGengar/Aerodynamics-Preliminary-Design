@@ -9,5 +9,20 @@
 \contentsline {section}{\numberline {0.3}Initial Airfoil Selection}{2}{section.0.3}%
 \contentsline {section}{\numberline {0.4}Airfoil Computational Analysis}{3}{section.0.4}%
 \contentsline {section}{\numberline {0.5}Algorithm Development}{4}{section.0.5}%
-\contentsline {section}{\numberline {0.6}Airfoil Experimental Analysis}{4}{section.0.6}%
-\contentsline {section}{\numberline {0.7}Wing Design}{4}{section.0.7}%
+\contentsline {subsection}{\numberline {0.5.1}Setup\_Airfoil\_Selection\_Algorithm}{4}{subsection.0.5.1}%
+\contentsline {subsection}{\numberline {0.5.2}Fetch\_Airfoils}{5}{subsection.0.5.2}%
+\contentsline {subsection}{\numberline {0.5.3}Produce\_Airfoil\_List}{6}{subsection.0.5.3}%
+\contentsline {subsection}{\numberline {0.5.4}Make\_Airfoil\_Directories}{6}{subsection.0.5.4}%
+\contentsline {subsection}{\numberline {0.5.5}Move\_Airfoil\_Directories}{6}{subsection.0.5.5}%
+\contentsline {subsection}{\numberline {0.5.6}Multi\_Airfoil\_Analysis}{6}{subsection.0.5.6}%
+\contentsline {subsection}{\numberline {0.5.7}Ave\_CL\_Max.py}{7}{subsection.0.5.7}%
+\contentsline {subsection}{\numberline {0.5.8}Single\_Airfoil\_Re\_Analysis}{8}{subsection.0.5.8}%
+\contentsline {subsection}{\numberline {0.5.9}Gen\_Input\_File}{8}{subsection.0.5.9}%
+\contentsline {subsection}{\numberline {0.5.10}Comment\_Out}{9}{subsection.0.5.10}%
+\contentsline {subsection}{\numberline {0.5.11}Read\_Polar.py}{9}{subsection.0.5.11}%
+\contentsline {subsection}{\numberline {0.5.12}Plot\_Airfoil\_Geom.py}{10}{subsection.0.5.12}%
+\contentsline {subsection}{\numberline {0.5.13}Plot\_CLMax\_Re.py}{11}{subsection.0.5.13}%
+\contentsline {subsection}{\numberline {0.5.14}Plot\_CL\_Alpha.py}{11}{subsection.0.5.14}%
+\contentsline {section}{\numberline {0.6}Results of Computational Analysis}{12}{section.0.6}%
+\contentsline {section}{\numberline {0.7}Airfoil Experimental Analysis}{13}{section.0.7}%
+\contentsline {section}{\numberline {0.8}Wing Design}{13}{section.0.8}%

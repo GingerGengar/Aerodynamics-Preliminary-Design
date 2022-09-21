@@ -1,5 +1,0 @@
-#!/bin/bash
-
-Airfoil_List_File_Name=Airfoil_List.dat
-ls *.dat > $Airfoil_List_File_Name
-sed -i s/.dat//g $Airfoil_List_File_Name

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+while read Airfoil_Name; do
+    mkdir $Airfoil_Name
+    mv $Airfoil_Name".dat" $Airfoil_Name"/"
+done < $1

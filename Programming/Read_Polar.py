@@ -11,7 +11,7 @@ Data_File_Name = str(sys.argv[1])
 data = np.genfromtxt(Data_File_Name)
 
 #What to do if data is empty
-if (np.shape(data)[0]):
+if (np.shape(data)[0] and (np.ndim(data) != 1)):
 
     #Figure out the maximum lift coefficient
     max_CL = np.max(data[:,1])

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.5.3)  19 SEP 2022 22:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.5.3)  21 SEP 2022 15:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -420,23 +420,52 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--22
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 14.
- (./Programming/R_Num.py) Excluding 'comment' comment. [3]) (./Content/Airfoil_Experimental_Analysis.tex Excluding 'comment' comment.) (./Content/Wing_Design.tex Excluding 'comment' comment.) [4] (./Main.aux)
+ (./Programming/R_Num.py) Excluding 'comment' comment. [3] Excluding 'comment' comment. (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) (./Programming/Setup_Airfoil_Selection_Algorithm
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 4.
+ (/usr/share/texmf-dist/tex/latex/base/ts1cmtt.fd
+File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)) [4] Excluding 'comment' comment. (./Programming/Fetch_Airfoils) Excluding 'comment' comment. [5] (./Programming/Produce_Airfoil_List) Excluding 'comment' comment. (./Programming/Make_Airfoil_Directories) Excluding 'comment' comment. (./Programming/Move_Airfoil_Directories) Excluding 'comment' comment. (./Programming/Multi_Airfoil_Analysis [6]) Excluding 'comment' comment. (./Programming/Ave_CL_Max.py) Excluding 'comment' comment. [7] (./Programming/Single_Airfoil_Re_Analysis) Excluding 'comment' comment. (./Programming/Gen_Input_File [8]) Excluding 'comment' comment. (./Programming/Comment_Out) Excluding 'comment' comment. (./Programming/Read_Polar.py [9]) Excluding 'comment' comment. (./Programming/Plot_Airfoil_Geom.py) Excluding 'comment' comment. [10] (./Programming/Plot_CLMax_Re.py) Excluding 'comment' comment. (./Programming/Plot_CL_Alpha.py) [11] Excluding 'comment' comment. (./Programming/Raw_Multi_Airfoil_Analysis.tex)
+<Content/Images/Selig_1223_Sketch.png, id=547, 1381.8024pt x 730.6497pt>
+File: Content/Images/Selig_1223_Sketch.png Graphic file (type png)
+<use Content/Images/Selig_1223_Sketch.png>
+Package pdftex.def Info: Content/Images/Selig_1223_Sketch.png  used on input line 238.
+(pdftex.def)             Requested size: 525.09038pt x 277.64977pt.
+<Content/Images/Eppler_E_423.png, id=549, 1381.8024pt x 730.6497pt>
+File: Content/Images/Eppler_E_423.png Graphic file (type png)
+<use Content/Images/Eppler_E_423.png>
+Package pdftex.def Info: Content/Images/Eppler_E_423.png  used on input line 243.
+(pdftex.def)             Requested size: 525.09038pt x 277.64977pt.
+ [12
+pdfTeX warning (ext4): destination with the same identifier (name{figure.0.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.247 
+       <./Content/Images/Selig_1223_Sketch.png>]) (./Content/Airfoil_Experimental_Analysis.tex Excluding 'comment' comment.) (./Content/Wing_Design.tex Excluding 'comment' comment.) [13
+pdfTeX warning (ext4): destination with the same identifier (name{figure.0.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.49 \end{document}
+                    <./Content/Images/Eppler_E_423.png>] (./Main.aux)
 Package rerunfilecheck Info: File `Main.out' has not changed.
-(rerunfilecheck)             Checksum: BE0CBFE373EC61E9138075705DA62143;1378.
+(rerunfilecheck)             Checksum: EB44C616101D6230AE7A70FB88BA3231;3882.
  ) 
 Here is how much of TeX's memory you used:
- 12569 strings out of 478238
- 187676 string characters out of 5850457
- 774988 words of memory out of 5000000
- 30574 multiletter control sequences out of 15000+600000
- 479367 words of font info for 72 fonts, out of 8000000 for 9000
+ 13291 strings out of 478238
+ 200095 string characters out of 5850457
+ 1032100 words of memory out of 5000000
+ 30869 multiletter control sequences out of 15000+600000
+ 479664 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 65i,8n,66p,398b,1550s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Main.pdf (5 pages, 136079 bytes).
+ 65i,8n,66p,669b,2097s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on Main.pdf (14 pages, 294209 bytes).
 PDF statistics:
- 166 PDF objects out of 1000 (max. 8388607)
- 135 compressed objects within 2 object streams
- 40 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 718 PDF objects out of 1000 (max. 8388607)
+ 667 compressed objects within 7 object streams
+ 410 named destinations out of 1000 (max. 500000)
+ 203 words of extra memory for PDF output out of 10000 (max. 10000000)
 

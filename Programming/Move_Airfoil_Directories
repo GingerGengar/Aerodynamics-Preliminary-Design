@@ -1,0 +1,5 @@
+#!/bin/bash
+
+while read Airfoil_Name; do
+    mv $Airfoil_Name/ $2/
+done < $1

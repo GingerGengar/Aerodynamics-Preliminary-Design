@@ -1,0 +1,18 @@
+plop
+G, F
+
+load Lissaman_7769.dat
+oper
+ITER 400
+Visc 110000
+Mach 0
+Type 1
+Pacc
+
+
+aseq 0 50 0.1
+PWRT
+Lissaman_7769_Output_RE_110000.tex 
+
+
+Quit

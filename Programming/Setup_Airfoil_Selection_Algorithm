@@ -1,0 +1,16 @@
+#!/bin/bash
+
+Airfoil_Data_Directory="Airfoil_Data"
+mkdir $Airfoil_Data_Directory
+
+#Fetch all of the Airfoil Data
+./Fetch_Airfoils
+
+#Produce a List of all the Airfoils Available for sim
+./Produce_Airfoil_List
+
+#Produce All of the Airfoil Directories
+./Make_Airfoil_Directories Airfoil_List.txt
+
+#Move All Airfoil Directories Out
+./Move_Airfoil_Directories Airfoil_List.txt $Airfoil_Data_Directory

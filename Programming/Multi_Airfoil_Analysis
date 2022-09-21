@@ -12,14 +12,16 @@ Re_N_Inc=5000
 Multi_Airfoil_Output_File="Raw_Multi_Airfoil_Analysis.tex"
 
 #Print out the header
-echo "#|Airfoil Data Name|Minimum CL_Max| Average CL_Max| Number of Valid Data|Number of Total Data|" > $Multi_Airfoil_Output_File
+echo "#|Airfoil Data Name|Minimum CL_Max| Average CL_Max| Number of Valid Data|Number of Total Data|" >> $Multi_Airfoil_Output_File
 
 #Loop over the Input File
 while read Airfoil_Name; do
+    #Definition of Additional Address
+    Add_Address="Airfoil_Data/"$Airfoil_Name
     #Run the Simulation for a single airfoil and a Reynold's Number Range
     ./Single_Airfoil_Re_Analysis $Airfoil_Name $Initial_Re_N $Final_Re_N $Re_N_Inc
     #Print out the Airfoil Name for a single entry
     echo -n $Airfoil_Name" ">>$Multi_Airfoil_Output_File
     #Print out the Relevant Data for each entry
-    ./Ave_CL_Max.py $Airfoil_Name"_Multi_Re.tex">>$Multi_Airfoil_Output_File
+    ./Ave_CL_Max.py $Add_Address/$Airfoil_Name"_Multi_Re.tex">>$Multi_Airfoil_Output_File
 done < $1
