@@ -1,7 +1,3 @@
-
-
-
-
 %Seperator
 %Seperator
 %Seperator
@@ -11,12 +7,84 @@
 \begin{comment}
 \end{comment}
 
-Need to figure out equation for flat plate boundary layer thickness
+%Seperator
+%Seperator
+%Seperator
+%Seperator
+\subsection{Approximate Boundary Layer Thickness}
+\begin{comment}
+\end{comment}
+Having a way to estimate the thickness of the boundary layer is useful in the case wherein we need to make vortex generators around the control surfaces. The vortex generators have to be around the size of the boundary layer as to ensure its effectiveness and that is preturbs the free-stream as minimally as possible.
+%Seperator
+\\~\\Here, the boundary layer is assumed to be laminar. Laminar boundary layer thickness $\delta$ can be estimated by the following relation,
+$$\frac{\delta}{x} = \frac{5}{\sqrt{R(x)}}$$
+Substituting for the Reynold's number based on length $x$,
+$$R(x) = \frac{\rho U_{\infty} x}{\mu}$$
+Attempting to substitute Reynold's number as a function of $x$,
+\begin{equation}\delta = \frac{5x}{\sqrt{R(x)}} = 5x\frac{1}{\sqrt{R(x)}} \label{BL-thickness-manip-1}\end{equation}
+We would need an expression for the square root reciprocal of Reynold's number. Taking the recpriprocral of the Reynold's number first,
+$$\frac{1}{R(x)} = \frac{\mu}{\rho U_{\infty} x}$$
+Taking the square root of this recpriocral,
+$$\frac{1}{\sqrt{R(x)}} = \sqrt{\displaystyle \frac{\mu}{\rho U_{\infty} x}}$$
+Substituting this into equation $\ref{BL-thickness-manip-1}$,
+$$\delta = 5x\frac{1}{\sqrt{R(x)}} $$
+$$\delta = 5x\times \sqrt{\displaystyle \frac{\mu}{\rho U_{\infty} x}} =  = 5\times \sqrt{\displaystyle \frac{\mu x^{2}}{\rho U_{\infty} x}} = 5\sqrt{\displaystyle \frac{\mu x}{\rho U_{\infty}}} $$
 
-Need equation for aspect ratio
+%Seperator
+%Seperator
+%Seperator
+%Seperator
+\subsection{Aspect Ratio}
+\begin{comment}
+$$A_{w} A_{r} = b^{2}$$
+\begin{equation}b = \sqrt{A_{w} A_{r}} \label{span-length}\end{equation}
+\end{comment}
+The expression for aspect ratio is shown below,
+\begin{equation}A_{r} = \frac{b^{2}}{A_{w}} \label{basic-def-aspect-ratio}\end{equation}
+%$$A_r = (b**2)/A_w$$
+wherein $b$ represents the span of the aircraft wing and $A_{w}$ represents the area of the aircraft wing. We can re-manipulate this equation to obtain the span of a given wing,
 
-Need equation for taper ratio
+%Seperator
+%Seperator
+%Seperator
+%Seperator
+\subsection{Tapered Wing Design}
+\begin{comment}
+\end{comment}
+Due to constraints in our manufacturing process, a tapered wing seems to suit our needs. We also choose a taper ratio of $\lambda = 0.45$ which would be closest to the elliptical lift distribution. The taper ratio for a wing is shown below,
+\begin{equation}\lambda = \frac{L_{c,t}}{L_{c,r}} \label{taper-ratio-base}\end{equation}
+wherein $L_{c,r}$ represents the chord length of the wings at the roots and $L_{c,t}$ represents the chord length of the wings at the tips. A tapered wing is essentially a trapezoid. Therefore, its area could be described by the expression below,
+$$A_{w} = \frac{1}{2}b(L_{c,r} + L_{c,t})$$
+We would want to express the wing area in terms of the root chord length. Let us use equation $\ref{taper-ratio-base}$ to express $L_{c,t}$ in terms of $L_{c,r}$.
+$$\lambda = \frac{L_{c,t}}{L_{c,r}}$$
+$$\lambda L_{c,r} = L_{c,t}$$
+Substituting to the wing area equation,
+$$A_{w} = \frac{1}{2}b(L_{c,r} + \lambda L_{c,r})$$
+$$A_{w} = \frac{1}{2}b L_{c,r}(1 + \lambda )$$
+$$A_{w} = \frac{b(1 + \lambda )}{2} L_{c,r}$$
+We would like to get an expression for the span of the wing though,
+$$\frac{A_{w}}{L_{c,r}} = \frac{b(1 + \lambda )}{2}$$
+\begin{equation}\left(\frac{A_{w}}{L_{c,r}}\right)\frac{2}{(1 + \lambda )} = b \label{Span from Area}\end{equation}
+%$$(A_w/L_cr)*(2/(1 + lambda_w )) = b$$
 
-An aircraft has to be designed such that it spends most of its time flying at an angle of attack that is best suited for its best L/D ratio for maximum efficiency.
-
-
+%Seperator
+%Seperator
+%Seperator
+%Seperator
+\subsection{Wing Design Algorithm}
+\begin{comment}
+\end{comment}
+We are going to assume the input to this to be the total main wing area and the root chord of the main wing.
+The total main wing area was obtained from knowing the wing loading of the aircraft and approximate sizing determined earlier. 
+The root chord of the wing is a sane parameter because we need to make sure that the wing root can "fit" into the fuselage correctly.
+\begin{enumerate}
+\item We can use equation $\ref{Span from Area}$ to get the span of the wing from the root chord and the total main wing area.
+\item We are then going to compute the aspect ratio of the wing based on equation $\ref{basic-def-aspect-ratio}$. This an important parameter, and we might use it later.
+\end{enumerate}
+The \texttt{Python} script below implements the equations discussed above to arrive at the wing parameters,
+\lstinputlisting[language=Python]{Programming/Wing_Design.py}
+$$$$
+The result of running the algorithm is shown below,
+\lstinputlisting{Programming/Wing_Parameters.tex}
+$$$$
+Based on extensive discussions, we have decided not to use a tapered wing to maximize wing area and reduce stall speed. The main wing's airfoil cross-section is the \texttt{Naca 6412}, and it will also be $0.903224\,m^{2}$ in area, $0.3556\,m$ in root chord with no taper. The tail would use a symmetric airfoil \texttt{Naca 0012} with no taper and an aspect ratio of $5$.

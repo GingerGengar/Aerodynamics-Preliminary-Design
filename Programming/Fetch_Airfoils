@@ -33,5 +33,20 @@ wget http://airfoiltools.com/airfoil/seligdatfile?airfoil=dae31-il -O Drela_DAE3
 # For Airfoil Lissaman 7769   
 wget http://airfoiltools.com/airfoil/seligdatfile?airfoil=l7769-il -O Lissaman_7769.dat
 
+#For Airfoil Naca_2412
+wget http://airfoiltools.com/airfoil/seligdatfile?airfoil=naca2412-il -O Naca_2412.dat
+
+#For Airfoil N-24
+wget http://airfoiltools.com/airfoil/seligdatfile?airfoil=n24-il -O N-24.dat
+
+#For Airfoil Naca_6412
+wget http://airfoiltools.com/airfoil/seligdatfile?airfoil=naca6412-il -O Naca_6412.dat
+
+#For Airfoil Naca_2414
+wget http://airfoiltools.com/airfoil/seligdatfile?airfoil=n2414-il -O Naca_2414.dat
+
+#For Airfoil Eppler 395
+wget http://airfoiltools.com/airfoil/seligdatfile?airfoil=e395-il -O Eppler_E_395.dat
+
 #Customary End
 echo "Finished Fetching..."

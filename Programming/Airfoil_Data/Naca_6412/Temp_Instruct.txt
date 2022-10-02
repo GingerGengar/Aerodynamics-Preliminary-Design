@@ -1,0 +1,18 @@
+plop
+G, F
+
+load Naca_6412.dat
+oper
+ITER 2000
+Visc 105000
+Mach 0
+Type 1
+Pacc
+
+
+aseq 0 50 0.1
+PWRT
+Naca_6412_Output_RE_105000.tex 
+
+
+Quit

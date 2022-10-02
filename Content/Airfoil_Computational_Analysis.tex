@@ -232,8 +232,7 @@ The command above would plot the lift coefficient vs angle of attack for the \te
 From the $10$ initial airfoils chosen, here are the tabulated results,
 \lstinputlisting{Programming/Raw_Multi_Airfoil_Analysis.tex}
 $$$$
-As one can see, there are several convergence issues with \texttt{Xfoil} for some of the airfoils. We decided that $2$ good candidates for further testing would be the \texttt{Selig 1223} airfoil and the \texttt{Eppler E 423} airfoils. Both airfoils are highly cambered and have a substantial leading edge thickness, just like what we wanted.
-
+As one can see, there are several convergence issues with \texttt{Xfoil} for some of the airfoils. Initially, the \texttt{Selig 1223}  airfoil and the \texttt{Eppler E 423} airfoils look like good candidates, but structurally the bent airfoils may not be ideal for manufacturing. They also tend to stall at a lower angle of attack, which makes the aircraft more sensitive to the flight conditions. For these reasons, we have decided to move on with the \texttt{NACA 6412} airfoil.
 \begin{figure}[H]\centering
 \includegraphics[scale=\size]{Content/Images/Selig_1223_Sketch.png}
 \caption{Representation of the Selig 1223 Airfoil}
@@ -244,6 +243,13 @@ As one can see, there are several convergence issues with \texttt{Xfoil} for som
 \caption{Representation of the Eppler E 423 Airfoil}
 \label{Eppler_Sketch}
 \end{figure}
+\begin{figure}[H]\centering
+\includegraphics[scale=\size]{Content/Images/Naca_6412_Diag.png}
+\caption{Representation of Naca 6412 Airfoil}
+\label{Naca 6412 Sketch}
+\end{figure}
+
+
 
 
 

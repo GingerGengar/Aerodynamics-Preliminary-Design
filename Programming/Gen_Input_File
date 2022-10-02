@@ -16,7 +16,7 @@ echo "load $1.dat"
 echo "oper"
 
 #Change Iteration Solvers
-echo "ITER 400"
+echo "ITER 2000"
 
 #Set the Reynold's Number
 echo "Visc $2"
